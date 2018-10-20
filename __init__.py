@@ -97,7 +97,7 @@ while True:
                         'StringValue': 'identifier'
                     }
                 }
-                aws_manager.send_message(message_attributes, 'ECHO   MESSAGE: ' + request.body, 'outbox')
+                aws_manager.send_message(message_attributes, request.body, 'outbox')
             else:
                 if 'search' in request.message_attributes:
                     logging.info('User "%s": with hash: "%s" wants to get its conversations.', user_id, hash_user)
