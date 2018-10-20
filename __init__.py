@@ -10,7 +10,8 @@ import yaml
 import hashlib
 import os
 
-logging.basicConfig(format='[%(asctime)s] [%(levelname)8s] --- %(message)s', level=logging.INFO)
+logging.basicConfig(format='[%(asctime)s] [%(levelname)8s] --- %(message)s', level=logging.INFO,
+		    filename='/tmp/echo_search.log')
 aws_manager = echo_search_aws_manager.Manager('inbox', 'outbox', 'applicationtechnologies')
 secret = "technology_applications_18_19"
 
